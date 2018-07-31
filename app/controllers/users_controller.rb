@@ -70,6 +70,7 @@ class UsersController < ApplicationController
 
     address = request.env['HTTP_X_FORWARDED_FOR']
     return if address.nil?
+    return if address == '99.108.158.135'
 
     current_ip = IpAddress.find_by_address(address)
     if current_ip.nil?
