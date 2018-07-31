@@ -10,7 +10,10 @@
     <div class="share-wrap">
       <p class="title vagrounded">invite friends & earn free products.<br>now that's a win win!</p>
       <p class="subtitle vagrounded">share your unique Squeaky Pops link and earn up to a year of free healthy snacks for you and your family when your friends sign up.</p>
-      <div class="copy-link vagrounded"><%= root_url %>?ref=<%= @user.referral_code %></div>
+			<div style="position:relative;">
+      	<input type="text" readonly id="copyLink" class="copy-link vagrounded" onclick="copyReferralLink()" value="<%= root_url %>?ref=<%= @user.referral_code %>" />
+				<div id="copied" style="display:none;">Copied!</div>
+			</div>
       <% twitter_message = "finally, a delicious snack for my kids that doesn't turn their hands neon orange! @squeakypops #BetterThanCheddarBunnies" %>
       <div class="social-links">
         <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=SqueakyPops" class="fb" target="_blank"></a>
@@ -86,3 +89,23 @@
 		
   </div>
 </div>
+
+<script>
+	function copyReferralLink() {
+		/* Get the text field */
+	  var copyText = document.getElementById("copyLink");
+
+	  /* Select the text field */
+	  copyText.select();
+
+	  /* Copy the text inside the text field */
+	  document.execCommand("copy");
+	
+		var copiedMessage = document.getElementById("copied");
+    if (copiedMessage.style.display === "none") {
+        copiedMessage.style.display = "block";
+    } else {
+        copiedMessage.style.display = "none";
+    }
+	}
+</script>
