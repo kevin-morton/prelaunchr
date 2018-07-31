@@ -1,6 +1,6 @@
 <div class="header">
   <div class="content">
-    <p class="byline brandon">Thank you for signing up!</p>
+    <p class="byline vagrounded">Thank you for signing up!</p>
   </div>
 </div>
 
@@ -8,9 +8,9 @@
   <div class="page-content clearfix">
     <div class="mammoth"></div>
     <div class="share-wrap">
-      <p class="title brandon">invite friends & earn free products.<br>now that's a win win!</p>
-      <p class="subtitle brandon">share your unique Squeaky Pops link and earn up to a year of free healthy snacks for you and your family when your friends sign up.</p>
-      <div class="copy-link brandon"><%= root_url %>?ref=<%= @user.referral_code %></div>
+      <p class="title vagrounded">invite friends & earn free products.<br>now that's a win win!</p>
+      <p class="subtitle vagrounded">share your unique Squeaky Pops link and earn up to a year of free healthy snacks for you and your family when your friends sign up.</p>
+      <div class="copy-link vagrounded"><%= root_url %>?ref=<%= @user.referral_code %></div>
       <% twitter_message = "finally, a delicious snack for my kids that doesn't turn their hands neon orange! @squeakypops #BetterThanCheddarBunnies" %>
       <div class="social-links">
         <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=SqueakyPops" class="fb" target="_blank"></a>
@@ -39,11 +39,11 @@
 %>
 <div class="prizes <% if found %>prize-<%= found["class"] %><% end %>">
   <div class="page-content">
-    <p class="callout brandon">Here's How It Works:</p>
+    <p class="callout vagrounded">Here's How It Works:</p>
     <ul class="products clearfix">
-      <li class="title brandon"><p class="friends">Friends joined</p><!--<p class="rewards">Squeaky Pop's Product</p>--></li>
+      <li class="title vagrounded"><p class="friends">Friends joined</p><!--<p class="rewards">Squeaky Pop's Product</p>--></li>
       <% stops.each do |stop| %>
-        <li class="product brandon <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
+        <li class="product vagrounded <% if stop["selected"] %>selected<% end %> <% if stop["class"] == 'five' %>last<% end %>">
           <div class="circle"><%= stop["count"] %></div>
           <div class="sep"></div>
           <p><%= stop["html"].html_safe %></p>
@@ -73,16 +73,16 @@
     %>
 
     <% if referrals_count == 0 %>
-      <p class="place brandon"><span>No</span> friends have joined...Yet!</p>
+      <p class="place vagrounded"><span>No</span> friends have joined...Yet!</p>
     <% else %>
-      <p class="place brandon"><span><%= referrals_count %></span> <%= words %> joined</p>
+      <p class="place vagrounded"><span><%= referrals_count %></span> <%= words %> joined</p>
     <% end %>
-    <p class="check brandon">Keep checking</p>
+    <p class="check vagrounded">Keep checking</p>
 
 		<!--
-    <p class="ship brandon">We ship to the U.S. (& Canada Soon)</p>
+    <p class="ship vagrounded">We ship to the U.S. (& Canada Soon)</p>
 		-->
-    <a class="policy brandon" href="/privacy-policy" target="_blank">Privacy Policy</a>
+    <a class="policy vagrounded" href="/privacy-policy" target="_blank">Privacy Policy</a>
 		
   </div>
 </div>

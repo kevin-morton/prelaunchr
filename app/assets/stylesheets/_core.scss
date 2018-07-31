@@ -1,3 +1,15 @@
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3730BB");
+
+@font-face {font-family: 'VAGRounded';font-weight: normal;font-style: normal;src: url('/webfonts/3730BB_0_0.eot');src: url('/webfonts/3730BB_0_0.eot?#iefix') format('embedded-opentype'),url('/webfonts/3730BB_0_0.woff2') format('woff2'),url('/webfonts/3730BB_0_0.woff') format('woff'),url('/webfonts/3730BB_0_0.ttf') format('truetype'),url('/webfonts/3730BB_0_0.svg#wf') format('svg');}
+ 
+  
+@font-face {font-family: 'VAGRounded';font-weight: bold;font-style: normal;src: url('/webfonts/3730BB_1_0.eot');src: url('/webfonts/3730BB_1_0.eot?#iefix') format('embedded-opentype'),url('/webfonts/3730BB_1_0.woff2') format('woff2'),url('/webfonts/3730BB_1_0.woff') format('woff'),url('/webfonts/3730BB_1_0.ttf') format('truetype'),url('/webfonts/3730BB_1_0.svg#wf') format('svg');}
+
+body, h1, h2, h3, h4, h5, h6 {
+	font-family: VAGRounded, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
+
 form{
 	margin-bottom: 0;
 }
@@ -66,7 +78,7 @@ html.home{
 
 #home .form-wrap{
 	height: 80px;
-	width: 500px;
+	width: 510px;
 	margin: 23px auto 0;
 }
 
@@ -100,7 +112,7 @@ html.home{
 	font-size: 14px;
 	padding: 8px 0 8px 10px;
 	border: 3px solid #125091;
-	width: 341px;
+	width: 351px;
 	outline: none;
 	letter-spacing: 1px;
 	border-top-left-radius: 10px;
@@ -257,6 +269,9 @@ html.home{
 .brandon{
 	font-family: "Brandon Grotesque", "brandon-grotesque", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 }
+.vagrounded {
+	font-family: VAGRounded, "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
 
 #refer{
 	background: #FFF;
@@ -293,7 +308,7 @@ html.home{
 }
 
 #refer .header .byline{
-	font-size: 14px;
+	font-size: 16px;
   letter-spacing: 1px;
   text-transform: none;
 }
@@ -370,6 +385,7 @@ html.home{
 	font-size: 16px;
 	text-transform: none;
 	margin-top: 15px;
+	letter-spacing: 0.5px;
 }
 
 #refer .share-wrap .copy-link{
@@ -497,6 +513,7 @@ html.home{
 #refer .prizes .products li.title .friends{
 	margin-top: 7px;
 	letter-spacing: 2px;
+	font-size: 16px;
 }
 
 #refer .prizes .products li.title .rewards{
@@ -654,7 +671,7 @@ html.home{
 
 #refer .prizes p.place{
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
 	color: #125091;
 	width: 100%;
 	font-weight: 500;
@@ -670,11 +687,11 @@ html.home{
 
 #refer .prizes p.check{
 	text-align: center;
-	font-size: 16px;
-	color: #858181;
+	font-size: 18px;
+	color: #125091;
 	width: 100%;
 	font-weight: 500;
-	margin-top: 5px;
+	margin-top: 10px;
 	text-transform: lowercase;
 }
 
