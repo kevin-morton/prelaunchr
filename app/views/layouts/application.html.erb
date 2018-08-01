@@ -22,11 +22,16 @@
   <% end %>
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
+
+	<script>
+		if(window.location.href.indexOf("betterthancheddarbunnies.com") !== -1) {
+			if (location.protocol !== "https:") location.protocol = "https:";
+		}
+	</script>
 </head>
 <body id="<%= @bodyId %>">
 
 <%= yield %>
-
 
 </body>
 </html>
